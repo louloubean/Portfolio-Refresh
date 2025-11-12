@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erin McLeod</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Analytics (kept from original) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFSXQVMQ1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TFSXQVMQ1Q');
+    </script>
+
+    <!-- Hotjar (kept from original) -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2323301,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body>
+
+<!--header section-->    
+<header class="main-header">
+    <div class="container header-inner">
+        <a href="index.html" class="brand">
+            <img class="EMlogo" src="images/logo.png" alt="logo">
+            <span>Erin McLeod</span>
+        </a>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a href="index.html">About</a></li>
+                <li><a href="index2.html">Work</a></li>
+                <li><a href="index3.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!-- HERO (reworked to match Figma) -->
+<section class="hero-section hero--figma">
+    <div class="hero-bar">
+        <div class="container hero-content">
+            <div>
+                <h1>Hi, I’m Erin McLeod.</h1>
+                <p class="hero-tagline">
+                    I specialize in building resilient systems—and the teams that power them.
+                </p>
+            </div>
+            <div class="hero-placeholder">
+                <!-- optional hero image placeholder -->
+            </div>
+        </div>
+    </div>
+
+    <!-- summary paragraph below hero bar -->
+    <div class="container hero-summary">
+        <p>
+            I build bridges between design, data, and mission. With nearly two decades in innovation leadership, 
+            I’ve managed everything from prototyping and product strategy to cloud transformation, connectivity, and large-scale data center operations. 
+            My work explores how human-centered design and emerging technologies can drive efficiency, resilience, and impact across complex systems.
+        </p>
+        <a class="primary-btn" href="index2.html">View My Work</a>
+    </div>
+</section>
+
+<!-- Professional Skillset (reduced from 4 to 3) -->
+<section class="mySkills">
+    <div class="container">
+        <h2>Professional Skillset</h2>
+        <div class="skillsGrid skillsGrid--three">
+            <div class="skillsContainer">
+                <p><img class="icon" src="images/smart-meter.png" alt="Creative Direction"></p>
+                <div>
+                    <h3>Creative Direction</h3>
+                    <p>Connecting strategy and design to explore what’s possible when mission demands evolve.</p>
+                </div>
+            </div>
+
+            <div class="skillsContainer">
+                <p><img class="icon" src="images/safety.png" alt="UX Research and Strategy"></p>
+                <div>
+                    <h3>UX Research &amp; Strategy</h3>
+                    <p>Translating user insight into measurable impact through research, testing, and service design.</p>
+                </div>
+            </div>
+
+            <div class="skillsContainer">
+                <p><img class="icon" src="images/working.png" alt="Product Management"></p>
+                <div>
+                    <h3>Product &amp; Program Leadership</h3>
+                    <p>Building the right solutions for the right problems across multi-disciplinary, high-stakes teams.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- original bio/quote band (kept) -->
+<footer class="footer-section intro-band">
+    <div class="container">
+        <div class="grid-container">
+            <div class="item1">
+                <h4>“Through design thinking, we remember the value of play as a gateway to possibility.”</h4>
+            </div>
+            <div class="item2">
+                <p>I’m a multi-disciplinary designer based in Northern Virginia and have spent my career connecting the dots between mission, intelligence, and technology to accelerate government innovation. The convergence of disruptive technologies offers endless opportunity to create and learn from others, and I am passionate about empowering you to do the same through design.</p>
+            </div>
+            <div class="item3">
+                <p>Previous lives in visual art, language, and research have all shaped my interest in user-centered design, and while I look to past experience for inspiration, I draw on human interactions and empathy to create meaningful experiences and solve problems.</p>
+            </div>
+            <div class="item4">
+                <img class="About" src="images/IMG_9463.jpg" alt="about" width="380">
+            </div>
+            <div class="item5">
+                <a href="mailto: email@gmail.com">email@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- NEW footer from previous command -->
+<footer class="site-footer">
+    <div class="container footer-top">
+        <div class="socials">
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="YouTube">yt</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+    </div>
+    <div class="container footer-cols">
+        <div>
+            <h4>Skills</h4>
+            <ul>
+                <li>UI design</li>
+                <li>UX design</li>
+                <li>Wireframing</li>
+                <li>Diagramming</li>
+                <li>Brainstorming</li>
+                <li>Online whiteboard</li>
+                <li>Team collaboration</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Experiences</h4>
+            <ul>
+                <li>Design</li>
+                <li>Prototyping</li>
+                <li>Development features</li>
+                <li>Design systems</li>
+                <li>Collaboration features</li>
+                <li>Design process</li>
+                <li>FigJam</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
