@@ -25,6 +25,7 @@ body {
   align-items: center;
   padding: 1rem 3rem;
   border-bottom: 1px solid var(--border);
+  list-style: none;
 }
 
 /* header clean-up */
