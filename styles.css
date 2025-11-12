@@ -320,3 +320,70 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+/* --- Projects page --- */
+
+.projects-wrapper {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.projects-grid {
+  /* 2 columns with lots of white space */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  column-gap: 6vw;        /* wide gutters, desktop */
+  row-gap: 18vh;          /* lots of vertical breathing room */
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.project-tile {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  min-height: 28vh;       /* gives each tile presence */
+  border-radius: 8px;
+  /* invisible hit area for hover */
+  padding: 2rem 1rem;
+}
+
+.project-tile h2 {
+  font-family: "Playfair Display", Georgia, serif; /* matches your headings */
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  letter-spacing: 0.01em;
+  color: #2a2f2e; /* soft charcoal like the mock */
+  margin: 0;
+}
+
+/* subtle hover affordance without breaking the minimal look */
+.project-tile:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+/* active link in header nav */
+.main-nav-list .is-active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* responsive tweaks */
+@media (max-width: 1000px) {
+  .projects-grid {
+    column-gap: 4vw;
+    row-gap: 14vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+    row-gap: 8vh;
+  }
+  .project-tile {
+    min-height: 20vh;
+  }
+}
