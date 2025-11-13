@@ -750,3 +750,61 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 
 /* optional inner padding for hero content */
 .hero--figma .container { padding: 0 2rem; }
+
+/* --- Slimmer purple bio band --- */
+.intro-band {
+  background: var(--brand-purple);
+  color: #fff;
+  padding: 2rem 0;            /* was much taller */
+  margin-top: 2rem;           /* smaller gap from content above */
+}
+
+/* grid spacing tightened */
+.grid-container {
+  grid-template-rows: auto auto auto auto;  /* natural height */
+  grid-template-columns: 58% 42%;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  padding-bottom: 1.5rem;     /* was 100px */
+}
+
+/* quote line smaller & calmer */
+.item1 h4 {
+  font-size: 28px;            /* was ~40px */
+  line-height: 1.2;
+  margin: 0 0 .75rem 0;
+}
+
+/* paragraphs narrower, friendlier size */
+.footer-section p {
+  color: #fff;
+  max-width: 60ch;            /* easier to read */
+  font-size: 16px;            /* was 18px */
+  line-height: 1.6;
+  margin: 0 0 .75rem 0;
+}
+
+/* image smaller and neatly framed */
+.item4 img.About {
+  width: 300px;               /* down from 380px */
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* remove email row entirely (you already did) */
+.item5 { display: none; }
+
+/* mobile polish */
+@media (max-width: 980px) {
+  .intro-band { padding: 1.5rem 0; }
+  .grid-container {
+    margin: 0 16px;
+    row-gap: .75rem;
+    column-gap: 0;
+    padding-bottom: 1rem;
+  }
+  .item4 { margin-top: .5rem; }
+  .item1 h4 { font-size: 24px; }
+  .footer-section p { font-size: 15px; }
+}
+
