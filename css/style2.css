@@ -85,8 +85,12 @@ h4, .quote-hand {
   color: var(--brand-blue); text-decoration: none;
   transition: color .2s ease;
 }
-.main-nav a:hover { color: var(--brand-pink); text-decoration: underline; text-underline-offset: 2px; }
-.main-nav .is-active { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.main-nav a:hover { color: var(--brand-pink); text-decoration: none; }
+.main-nav .is-active {
+  font-weight: 500;   /* same as normal */
+  text-decoration: none;
+}
+
 
 /* Book Appointment button (header optional) */
 .btn, .small-btn {
@@ -1426,4 +1430,20 @@ a.btn {
 .subcard:hover {
   transform: translateY(-6px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+/* Logo/Name hover behavior */
+.brand span {
+  color: var(--brand-blue);
+  transition: color .2s ease;
+}
+
+.brand:hover span {
+  color: var(--brand-pink);
+}
+
+.brand:active span {
+  color: var(--brand-blue); /* kills any click/active color change */
+}
+.brand {
+  text-decoration: none !important;
 }
