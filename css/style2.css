@@ -949,3 +949,264 @@ a.btn {
     padding: 0 1.25rem;
   }
 }
+
+/* ================================
+   PROJECTS: RESIZE + NESTED CARDS
+   ================================ */
+
+/* Slightly smaller big tiles so they can host subcards comfortably */
+.projects-grid {
+  gap: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.project-tile {
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 3rem 2rem;         /* down from 4rem to balance nested content */
+  min-height: 300px;          /* was ~320+ */
+  color: var(--brand-blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;         /* default tiles remain centered */
+  transition: box-shadow .25s ease, background .25s ease;
+}
+
+.project-tile:hover {
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.project-tile h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.45rem, 2vw, 1.9rem); /* smaller heading scale */
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Tile with inner grid (Business & Finance) */
+.project-tile--with-grid {
+  display: block;            /* use block so we can lay out inner content */
+  text-align: left;          /* headings left inside grid */
+  padding: 2.25rem 2rem;     /* slightly tighter outer padding */
+}
+
+.project-tile--with-grid h2 {
+  margin: 0 0 1.25rem 0;
+}
+
+/* 2-up subgrid for small project cards */
+.project-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;                 /* breathing room between subcards */
+}
+
+/* Subcards */
+.subcard {
+  display: block;
+  text-decoration: none;
+  color: var(--brand-blue);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.subcard:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  transform: translateY(-2px);
+}
+
+/* Thumbnail placeholder (drop in real images later) */
+.subcard .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;                  /* image-friendly rectangle */
+  background: linear-gradient(180deg, #f3f3f3, #e9e9e9);
+  border: 1px dashed rgba(0,0,0,.15);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+/* Subcard text scales */
+.subcard h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0 0 0.25rem 0;
+}
+
+.subcard .subtext {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2a2f2e;
+  margin: 0;
+}
+
+/* Mobile: stack subcards and reduce padding */
+@media (max-width: 780px) {
+  .project-tile { 
+    padding: 2rem 1.25rem; 
+    min-height: 260px; 
+    text-align: left; 
+  }
+  .project-tile h2 { 
+    font-size: 1.4rem; 
+  }
+  .project-tile--with-grid { 
+    padding: 1.75rem 1.25rem; 
+  }
+  .project-subgrid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+}
+
+/* ==========================================
+   UNIFORM OUTER PROJECT CARD DIMENSIONS
+   ========================================== */
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  min-height: 480px;          /* 🔹 consistent card height across all */
+  color: var(--brand-blue);
+  text-decoration: none;
+  transition: box-shadow .25s ease, background .25s ease;
+}
+
+.project-tile:hover {
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Headings within tiles — slightly smaller to fit new size */
+.project-tile h2 {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Ensure nested grids (like Business & Finance) still fit neatly */
+.project-tile--with-grid {
+  min-height: 480px;         /* match other tiles */
+}
+
+.project-subgrid {
+  flex-grow: 1;               /* fill space proportionally */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 780px) {
+  .project-tile {
+    min-height: 400px;
+    padding: 2rem 1.25rem;
+  }
+  .project-tile h2 {
+    font-size: 1.4rem;
+  }
+  .project-subgrid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==========================================
+   UNIFORM INNER SUBCARDS (equal height)
+   ========================================== */
+
+/* Make the subgrid stretch items to the same row height */
+.project-subgrid {
+  align-items: stretch;          /* grid items stretch to full row height */
+}
+
+/* Each subcard fills its grid cell and lays out content vertically */
+.subcard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;                  /* fill the grid track */
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--brand-blue);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+/* Keep thumbnail consistent with a fixed aspect ratio */
+.subcard .thumb,
+.subcard .thumb-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;           /* consistent rectangle */
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  flex: 0 0 auto;                /* image doesn't collapse */
+  object-fit: cover;             /* when using <img> */
+  background: linear-gradient(180deg, #f3f3f3, #e9e9e9);
+  border: 1px solid rgba(0,0,0,.08);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Text area grows to fill, so bottoms align */
+.subcard h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+  flex: 0 0 auto;
+}
+
+.subcard .subtext {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2a2f2e;
+  margin: 0;
+  flex: 1 1 auto;                /* this grows to take remaining space */
+}
+
+/* Optional footer row for tags/CTA inside the card */
+.subcard .meta {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+/* Hover without transforming text (keeps fonts crisp) */
+.subcard:hover {
+  transform: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+
+/* If you ever need 3-up inner cards, toggle this class on the wrapper */
+.project-subgrid.is-3up {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Mobile: single column subcards, still equal heights */
+@media (max-width: 780px) {
+  .project-subgrid { grid-template-columns: 1fr; }
+  .subcard { padding: 0.9rem; }
+}
