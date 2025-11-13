@@ -1367,10 +1367,11 @@ a.btn {
    ===================================== */
 .case-hero {
   background: var(--brand-purple);
-  padding: 4rem 0;
+  padding: 5rem 0;   /* slightly taller */
   margin-bottom: 3rem;
   color: #fff;
 }
+
 
 .case-hero-inner {
   display: flex;
@@ -1408,6 +1409,24 @@ a.btn {
   color: #fff;
   text-transform: uppercase;
   font-size: .9rem;
+}
+/* Case Study Hero Button */
+.case-hero-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #fff;                  /* white button */
+  color: var(--brand-purple);        /* purple text */
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.case-hero-btn:hover {
+  background: var(--brand-pink);     /* your pink hover */
+  color: #fff;
 }
 
 /* Responsive case hero */
