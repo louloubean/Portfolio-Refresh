@@ -571,3 +571,154 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+:root {
+  --card-padding: 2rem 1.5rem;
+  --card-min-h: 320px;
+  --card-title-size: clamp(1.55rem, 2.2vw, 2.1rem);
+  --skills-title-size: 1.125rem; /* 18px */
+  --skills-body-size: 1rem;      /* 16px */
+}
+
+.project-tile { padding: var(--card-padding); min-height: var(--card-min-h); }
+.project-tile h2 { font-size: var(--card-title-size); }
+.skillsContainer h3 { font-size: var(--skills-title-size); }
+.skillsContainer p  { font-size: var(--skills-body-size); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* ===========================
+   MOBILE POLISH (<= 780px)
+   =========================== */
+@media (max-width: 780px) {
+  /* Bigger hero already — give the summary a little more air */
+  .hero-summary {
+    padding-top: 2rem;      /* was 3rem total; feels tight on mobile */
+    padding-bottom: 3rem;
+  }
+
+  /* Make the purple hero slightly less tall on small screens */
+  .hero-bar {
+    padding: 5rem 0;        /* was 7rem; reduces scroll fatigue */
+  }
+
+  /* Projects grid: tighter rhythm + smaller tiles */
+  .projects-grid {
+    gap: 1.25rem;           /* was 1.5–2.25rem */
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .project-tile {
+    padding: 2.25rem 1.25rem; /* was 3–4rem */
+    min-height: 220px;        /* was 260–320px */
+  }
+  .project-tile h2 {
+    font-size: 1.4rem;        /* was ~1.6rem+ */
+    line-height: 1.25;
+  }
+
+  /* Home skill cards: tighten while keeping air */
+  .skillsGrid--three {
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .skillsContainer {
+    padding: 1.25rem 1rem;    /* was ~1.5–2rem */
+    min-height: unset;        /* let content dictate height */
+  }
+  .skillsContainer .icon {
+    width: 48px;
+    height: 48px;
+  }
+  .skillsContainer h3 {
+    font-size: 1.05rem;       /* ~16–17px */
+    margin: .1rem 0 .25rem;
+  }
+  .skillsContainer p {
+    font-size: .95rem;        /* ~15px */
+    line-height: 1.6;
+  }
+}
+
+/* ===========================
+   ULTRA-SMALL REFINEMENT
+   (<= 360px devices)
+   =========================== */
+@media (max-width: 360px) {
+  .project-tile { min-height: 200px; padding: 2rem 1rem; }
+  .project-tile h2 { font-size: 1.3rem; }
+  .skillsContainer h3 { font-size: 1rem; }
+  .skillsContainer p { font-size: .93rem; }
+}
+
+/* ===========================
+   FULL-BLEED PURPLE HERO
+   =========================== */
+.hero--figma {
+  background: var(--brand-purple);
+  color: #fff;
+}
+
+/* Remove container padding so color goes edge-to-edge */
+.hero--figma .hero-bar {
+  background: var(--brand-purple);
+  padding: 7rem 0; /* bigger hero height */
+}
+
+.hero--figma .container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 2rem; /* keep inner padding for text safety */
+}
+
+/* Make text white and crisp */
+.hero--figma h1,
+.hero--figma .hero-tagline {
+  color: #fff;
+}
+
+.hero--figma .hero-placeholder {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Tweak summary spacing to flow smoothly below hero */
+.hero-summary {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 780px) {
+  .hero--figma .hero-bar {
+    padding: 5rem 0;
+  }
+  .hero-summary {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+
+/* ===========================
+   BUTTON COLOR TWEAKS
+   =========================== */
+
+/* All primary buttons */
+.btn,
+.primary-btn {
+  background: var(--brand-blue);
+  color: #fff;
+  border: none;
+}
+
+/* Optional: add hover states for better feedback */
+.btn:hover,
+.primary-btn:hover {
+  background: #507bc2; /* lighter variant of your brand blue */
+  color: #fff;
+}
