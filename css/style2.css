@@ -246,7 +246,7 @@ button:hover, .btn-outline:hover { background: var(--brand-pink); color: #fff; b
 }
 
 /* ====== CONTACT PAGE THEME (from old style3.css) ====== */
-.body.contact-page { background: var(--brand-purple); } /* use by adding class to <body> if you want full purple */
+body.contact-page { background: var(--brand-purple); } /* use by adding class to <body> if you want full purple */
 .main-header.contact-header { background: #fff; padding-bottom: 80px; }
 
 .contact .container { color: #fff; text-align: left; }
@@ -276,3 +276,74 @@ button:hover, .btn-outline:hover { background: var(--brand-pink); color: #fff; b
 
 /* Utility: remove bullets anywhere needed */
 ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
+
+/* === CASE STUDY LAYOUT SUPPORT (index3) === */
+
+/* hero (title + image block side-by-side) */
+.hero {
+  max-width: var(--content-width);
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hero .hero-text h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero .hero-image {
+  background: #f2f2f2;
+  border-radius: 8px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+/* sections + cards */
+.section {
+  max-width: var(--content-width);
+  margin: var(--section-spacing) auto;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.one-col { margin-top: 2rem; }
+
+.card {
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.card h3 { font-size: 1rem; margin-bottom: .5rem; }
+
+/* lightweight footer for case study pages */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: var(--section-spacing);
+  padding: 3rem 1.5rem;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer .footer-top { display: flex; justify-content: flex-start; }
+.footer .socials { display: flex; gap: 1.5rem; font-size: .9rem; }
+.footer h4 { color: var(--brand-blue); margin-bottom: .75rem; font-size: 1rem; }
+.footer ul { list-style: none; padding: 0; margin: 0; }
+.footer li { font-size: .9rem; margin-bottom: .3rem; }
+
+/* responsive */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
