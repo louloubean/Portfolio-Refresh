@@ -808,3 +808,14 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   .footer-section p { font-size: 15px; }
 }
 
+/* Remove underline from Book Appointment */
+.btn,
+.small-btn,
+a.btn {
+  text-decoration: none;
+}
+
+.btn:hover,
+.small-btn:hover {
+  text-decoration: none;
+}
