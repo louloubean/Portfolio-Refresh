@@ -819,3 +819,103 @@ a.btn {
 .small-btn:hover {
   text-decoration: none;
 }
+
+/* ==================================
+   FOOTER STYLE UNIFICATION (all pages)
+   ================================== */
+
+/* Smaller, crisper type */
+.footer-cols {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.95);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings slightly heavier and closer to text */
+.footer-cols h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+/* List items smaller and evenly spaced */
+.footer-cols ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-cols li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: #2a2f2e;
+}
+
+/* Tighten layout and top padding */
+.site-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 0 3rem; /* smaller top and bottom */
+  background: #fff;
+}
+
+/* Adjust spacing between sections */
+.footer-top {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.25rem; /* less vertical space */
+}
+
+/* Column spacing more compact but breathable */
+.footer-cols {
+  display: flex;
+  gap: 3rem; /* was 4rem */
+  flex-wrap: wrap;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* Responsive: stacked but not cramped */
+@media (max-width: 900px) {
+  .footer-cols {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  .footer-cols h4 {
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* ==================================
+   FOOTER SOCIAL LINKS TUNING
+   ================================== */
+
+.footer-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 0.85rem; /* smaller to match footer font rhythm */
+  letter-spacing: 0.02em;
+}
+
+.socials a {
+  text-decoration: none;
+  color: var(--brand-blue);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.socials a:hover {
+  color: var(--brand-pink);
+  transform: translateY(-2px);
+}
