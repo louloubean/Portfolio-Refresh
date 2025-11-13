@@ -1357,3 +1357,64 @@ a.btn {
   letter-spacing: 0.5px;
   font-weight: 500;
 }
+
+/* =====================================
+   Purple Hero for Case Study (index3)
+   ===================================== */
+.case-hero {
+  background: var(--brand-purple);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.case-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.case-hero-text h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 5vw, 3.2rem);
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.case-hero-text p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.case-hero-text strong {
+  color: #fff;
+}
+
+.case-hero-image {
+  width: 280px;
+  height: 180px;
+  background: rgba(255,255,255,0.2);
+  border: 2px dashed rgba(255,255,255,0.4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+/* Responsive case hero */
+@media (max-width: 900px) {
+  .case-hero-inner {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .case-hero-image {
+    width: 100%;
+    max-width: 260px;
+  }
+}
