@@ -719,6 +719,34 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 /* Optional: add hover states for better feedback */
 .btn:hover,
 .primary-btn:hover {
-  background: #507bc2; /* lighter variant of your brand blue */
+  background: var(--brand-pink);
   color: #fff;
 }
+
+/* === REVERT: keep only the hero bar purple, summary on white === */
+.hero--figma { 
+  background: #fff;            /* section returns to white */
+}
+
+.hero--figma .hero-bar {
+  background: var(--brand-purple);
+  color: #fff;
+  padding: 7rem 0;             /* keep your taller purple hero */
+}
+
+/* ensure text inside the bar is white */
+.hero--figma .hero-bar h1,
+.hero--figma .hero-bar .hero-tagline {
+  color: #fff;
+}
+
+/* summary sits on white beneath the purple bar */
+.hero-summary {
+  background: #fff;
+  padding: 3rem 0 4rem;        /* your spacing */
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* optional inner padding for hero content */
+.hero--figma .container { padding: 0 2rem; }
