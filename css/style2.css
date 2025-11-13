@@ -919,3 +919,33 @@ a.btn {
   color: var(--brand-pink);
   transform: translateY(-2px);
 }
+/* === Fix index3 footer columns aligning center === */
+/* index3 footer uses .footer (not .site-footer) */
+.footer { align-items: stretch; }  /* ensure full-width column area */
+
+.footer .footer-cols {
+  max-width: none;           /* don't center a max-width block */
+  width: 100%;
+  margin: 0;                 /* remove 0 auto centering */
+  padding: 0 1.25rem;        /* match your .container side padding */
+  justify-content: flex-start;
+  text-align: left;
+  gap: 3rem;                 /* keep your spacing */
+}
+
+/* keep socials left too (already are, but safe) */
+.footer .footer-top {
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0 1.25rem;
+}
+
+/* mobile: stacked but still left-aligned */
+@media (max-width: 900px) {
+  .footer .footer-cols {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.25rem;
+  }
+}
