@@ -1479,3 +1479,14 @@ a.btn {
   box-shadow: none;
   transform: none !important;
 }
+
+/* --- Inner project card hover: pink title + pink shadow --- */
+.project-inner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(242, 119, 164, 0.25); /* subtle pink glow */
+  border-color: var(--brand-pink);
+}
+
+.project-inner-card:hover h4 {
+  color: var(--brand-pink);
+}
