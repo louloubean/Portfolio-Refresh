@@ -257,11 +257,11 @@ h4, .quote-hand {
   color: var(--brand-blue);
 }
 
-.project-tile:hover {
+/* .project-tile:hover {
   background: #fff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-4px);
-}
+  transform: translateY(-4px); 
+}*/
 @media (max-width: 780px) {
   .projects-grid {
     gap: 1.5rem;
@@ -1417,4 +1417,13 @@ a.btn {
     width: 100%;
     max-width: 260px;
   }
+}
+/* Inner project cards hover */
+.subcard {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.subcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
