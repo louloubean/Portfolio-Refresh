@@ -1422,15 +1422,17 @@ a.btn {
     max-width: 260px;
   }
 }
-/* Inner project cards hover */
+/* Inner project cards hover: shadow only, no movement */
 .subcard {
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .subcard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  background-color: #ffffff;
+  transform: none;          /* ensure no lift */
 }
+
 /* Logo/Name hover behavior */
 .brand span {
   color: var(--brand-blue);
@@ -1446,4 +1448,15 @@ a.btn {
 }
 .brand {
   text-decoration: none !important;
+}
+/* Hard-stop any outer card motion */
+.project-tile {
+  transform: none !important;
+  transition: none !important;
+}
+
+.project-tile:hover {
+  background: #fafafa;      /* same as default */
+  box-shadow: none;
+  transform: none !important;
 }
