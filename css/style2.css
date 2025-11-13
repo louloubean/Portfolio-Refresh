@@ -246,7 +246,7 @@ button:hover, .btn-outline:hover { background: var(--brand-pink); color: #fff; b
 }
 
 /* ====== CONTACT PAGE THEME (from old style3.css) ====== */
-.contact-page body { background: var(--brand-purple); } /* use by adding class to <body> if you want full purple */
+.body.contact-page { background: var(--brand-purple); } /* use by adding class to <body> if you want full purple */
 .main-header.contact-header { background: #fff; padding-bottom: 80px; }
 
 .contact .container { color: #fff; text-align: left; }
