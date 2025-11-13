@@ -546,3 +546,28 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   }
   .project-tile h2 { font-size: 1.6rem; }
 }
+
+/* 1) Avoid transforming text containers: use shadow-only on hover */
+.skillsContainer,
+.project-tile { transform: none; }
+
+.skillsContainer:hover,
+.project-tile:hover {
+  /* remove translate or scale to prevent blur; keep the shadow lift */
+  transform: none;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+/* 2) Snap small text to cleaner sizes */
+.skillsContainer h3 { font-size: 1.125rem; }   /* 18px */
+.skillsContainer p  { font-size: 1rem; line-height: 1.6; } /* 16px */
+
+/* 3) Smoothing hints for crisper type (esp. Chrome/macOS) */
+.skillsContainer,
+.skillsContainer * ,
+.project-tile,
+.project-tile * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
