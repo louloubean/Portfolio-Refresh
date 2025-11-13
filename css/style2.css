@@ -1333,3 +1333,9 @@ a.btn {
   }
 }
 
+/* Remove ALL nav underlines everywhere */
+.main-nav a,
+.main-nav a:hover,
+.main-nav .is-active {
+  text-decoration: none !important;
+}
