@@ -138,12 +138,18 @@ h4, .quote-hand {
   max-width: 36rem;
 }
 
-.hero-placeholder {
-  width: 280px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px dashed rgba(255, 255, 255, 0.4);
+/* Hero image box */
+.hero-img-box {
+  flex-shrink: 0;
+  width: 260px;      /* tweak to 280/300 if you want it bigger */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
   border-radius: 12px;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-summary {
