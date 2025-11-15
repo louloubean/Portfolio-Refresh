@@ -192,7 +192,15 @@ h4, .quote-hand {
   padding-bottom: 100px;
 }
 .grid-container div { background: var(--brand-purple); }
-.item1 { grid-area: one; padding-top: 80px; }
+.item1 {
+  grid-area: one;
+  padding-top: 40px;   /* reduces vertical gap above text */
+  padding-bottom: 10px;
+}
+.grid-container {
+  align-items: start;
+}
+
 .item2 { grid-area: two; padding-right: 50px; padding-top: 20px; }
 .item3 { grid-area: three; padding-right: 50px; }
 .item4 { grid-area: four; padding-top: 20px; }
@@ -772,7 +780,7 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 /* grid spacing tightened */
 .grid-container {
   grid-template-rows: auto auto auto auto;  /* natural height */
-  grid-template-columns: 58% 42%;
+  grid-template-columns: 55% 45%;
   column-gap: 2rem;
   row-gap: 1rem;
   padding-bottom: 1.5rem;     /* was 100px */
@@ -796,10 +804,16 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 
 /* image smaller and neatly framed */
 .item4 img.About {
-  width: 300px;               /* down from 380px */
+  width: 380px;        /* was 300 */
   max-width: 100%;
   border-radius: 12px;
 }
+.item4 {
+  display: flex;
+  align-items: flex-start;  /* push image upward */
+  padding-top: 10px;        /* optional tweak */
+}
+
 
 /* remove email row entirely (you already did) */
 .item5 { display: none; }
