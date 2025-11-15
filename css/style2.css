@@ -1558,3 +1558,8 @@ a.btn {
     gap: 1.75rem;                                      /* a bit tighter */
   }
 }
+.footer-cols li span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
