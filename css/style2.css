@@ -203,7 +203,7 @@ h4, .quote-hand {
 
 .item2 { grid-area: two; padding-right: 50px; padding-top: 20px; }
 .item3 { grid-area: three; padding-right: 50px; }
-.item4 { grid-area: four; padding-top: 0px; display: flex; align-tiems: flex-start; }
+.item4 { grid-area: four; padding-top: 5px; display: flex; align-tiems: flex-start; }
 .item5 {
   grid-area: five; font-family: var(--font-body); font-weight: 500; font-size: 36px; color: #fff;
   padding-top: 40px; transition: transform .2s;
