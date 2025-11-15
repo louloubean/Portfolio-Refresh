@@ -177,7 +177,7 @@ h4, .quote-hand {
   background: #fafafa;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1.75rem 1.5rem;
+  padding: 1.5rem 1.25rem;
 }
 .skillsContainer p {
   margin: 0;
@@ -186,27 +186,34 @@ h4, .quote-hand {
   display: flex;
   justify-content: center;
 }
-.skillsContainer .icon { width: 60px; height: 60px; object-fit: contain; }
+.skillsContainer .icon { width: 52px; height: 52px; object-fit: contain; }
 .skillsContainer h3 {  margin: 0 0 .5rem 0;
   font-size: 1.2rem;
   text-align: center;  }
 
-/* Bullet grid inside skill cards */
+/* === Professional Skillset Bullet List (single column) === */
 .skills-list {
-   list-style: disc outside;
-  padding-left: 1.25rem;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 1.5rem;
-  row-gap: .4rem;
+  list-style: none;
+  padding: 0;
+  margin: .75rem 0 0;
 }
 
 .skills-list li {
- font-size: 0.9rem;
-  line-height: 1.5;
-  color: #2f4f7f;
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: .35rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
+
+.skills-list li::before {
+  content: "—";
+  top: 0;
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+
 
 /* ====== INTRO BAND (old purple footer section) ====== */
 .intro-band { background: var(--brand-purple); padding: 3.5rem 0; margin-top: 4rem; color: #fff; }
