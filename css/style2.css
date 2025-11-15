@@ -177,7 +177,7 @@ h4, .quote-hand {
   background: #fafafa;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 2rem 1.5rem;
+  padding: 1.75rem 1.5rem;
 }
 .skillsContainer p {
   margin: 0;
@@ -199,12 +199,12 @@ h4, .quote-hand {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 1.5rem;
-  row-gap: .6rem;
+  row-gap: .4rem;
 }
 
 .skills-list li {
- font-size: 1rem;
-  line-height: 1.6;
+ font-size: 0.9rem;
+  line-height: 1.5;
   color: #2f4f7f;
 }
 
@@ -1551,3 +1551,10 @@ a.btn {
   color: var(--brand-pink);
 }
 
+/* Force 3-across skills layout on larger screens */
+@media (min-width: 960px) {
+  .skillsGrid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));  /* fixed 3 columns */
+    gap: 1.75rem;                                      /* a bit tighter */
+  }
+}
