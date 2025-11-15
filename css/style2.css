@@ -200,6 +200,10 @@ h4, .quote-hand {
 .grid-container {
   align-items: start;
 }
+/* Desktop offset for bio image */
+.item4 {
+  margin-top: 1.25rem;   /* adjust this value until it feels right */
+}
 
 .item2 { grid-area: two; padding-right: 50px; padding-top: 20px; }
 .item3 { grid-area: three; padding-right: 50px; }
