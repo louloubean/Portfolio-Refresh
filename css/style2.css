@@ -175,6 +175,22 @@ h4, .quote-hand {
 }
 .skillsContainer .icon { width: 60px; height: 60px; object-fit: contain; }
 .skillsContainer h3 { margin: .25rem 0 .25rem; }
+/* Bullet grid inside skill cards */
+.skills-list {
+  list-style: disc;
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;            /* space for bullets */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.25rem;
+  row-gap: 0.35rem;
+}
+
+.skills-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2f4f7f;                   /* same tone as card body text */
+}
 
 /* ====== INTRO BAND (old purple footer section) ====== */
 .intro-band { background: var(--brand-purple); padding: 3.5rem 0; margin-top: 4rem; color: #fff; }
