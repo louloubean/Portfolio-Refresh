@@ -166,27 +166,29 @@ h4, .quote-hand {
 /* ====== SKILLS (3 up) ====== */
 .mySkills h2 { text-align: center; margin-top: 80px; }
 .skillsGrid--three {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem; margin-top: 2rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.25rem; margin-top: 2rem;
 }
 .skillsContainer {
   display: flex;
   flex-direction: column;       /* ensures image + title are stacked above the list */
+  align-items: center;        /* centers everything */
   gap: 1.25rem;                  /* space between image/title block and list */
-  background: #f7f7f7;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  min-height: 190px;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
 }
 .skillsContainer p {
   margin: 0;
   /* optionally center the icon: */
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 .skillsContainer .icon { width: 60px; height: 60px; object-fit: contain; }
-.skillsContainer h3 {  margin: 0 0 .75rem 0;
-  font-size: 1.15rem;
+.skillsContainer h3 {  margin: 0 0 .5rem 0;
+  font-size: 1.2rem;
   text-align: center;  }
 
 /* Bullet grid inside skill cards */
@@ -196,13 +198,13 @@ h4, .quote-hand {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 1rem;
-  row-gap: .35rem;
+  column-gap: 1.5rem;
+  row-gap: .6rem;
 }
 
 .skills-list li {
- font-size: .98rem;
-  line-height: 1.65;
+ font-size: 1rem;
+  line-height: 1.6;
   color: #2f4f7f;
 }
 
