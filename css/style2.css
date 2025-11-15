@@ -283,6 +283,18 @@ h4, .quote-hand {
   flex: 1 1 0;                /* ⬅️ make Education and Experience share space */
   min-width: 0;
 }
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--brand-blue);
+  transition: fill .2s ease, transform .2s ease;
+}
+
+.social-icon:hover svg {
+  fill: var(--brand-pink);
+  transform: translateY(-2px);
+}
+
 .experience-cols {
   display: flex;
   gap: 1.5rem;
