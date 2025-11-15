@@ -1558,8 +1558,24 @@ a.btn {
     gap: 1.75rem;                                      /* a bit tighter */
   }
 }
+/* Smaller, muted second line (already nice if you keep this) */
 .footer-cols li span {
   display: block;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+/* Make the Experience list two-column in desktop view */
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.75rem;
+  row-gap: 0.5rem;
+}
+
+/* On smaller screens, go back to a single column */
+@media (max-width: 700px) {
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
 }
