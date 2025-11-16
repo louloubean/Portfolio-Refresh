@@ -526,6 +526,16 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+.card-image,
+.card-media img {
+  transition: transform 0.35s ease;
+  transform-origin: center;
+}
+
+.card-image:hover,
+.card-media img:hover {
+  transform: scale(1.04);
+}
 
 /* lightweight footer for case study pages */
 .footer {
