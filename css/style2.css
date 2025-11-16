@@ -529,6 +529,24 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   transform-origin: center;
 }
+/* Row wrappers in Discover */
+.discover-row {
+  margin-top: 1.75rem;
+}
+
+/* Make the first row (Problem Definition) sit a bit closer to the H2 */
+.section.wrapper .discover-row:first-of-type {
+  margin-top: 1.25rem;
+}
+.discover-row + .discover-row {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+/* Compact version of a card for short content */
+.card-compact {
+  padding: 1.1rem 1.25rem;
+}
 
 /* if your SWOT img uses .card-media img instead of .card-image, this covers it too */
 .card-media img {
