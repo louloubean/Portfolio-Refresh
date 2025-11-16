@@ -723,6 +723,26 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   margin-bottom: 0.5rem;
 }
 
+/* Next Steps list styling */
+.next-steps-list {
+  list-style: none;
+  margin: 0.75rem 0 1rem 0;
+  padding: 0;
+}
+
+.next-steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.next-steps-list li .icon {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
 
 /* lightweight footer for case study pages */
 .footer {
