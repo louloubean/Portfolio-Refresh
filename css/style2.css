@@ -1414,7 +1414,7 @@ a.btn {
    ===================================== */
 .case-hero {
   background: var(--brand-purple);
-  padding: 5rem 0;   /* slightly taller */
+  padding: 3.5rem 0; 
   margin-bottom: 3rem;
   color: #fff;
 }
@@ -1440,12 +1440,17 @@ a.btn {
 }
 
 .case-meta p {
-  margin: 0 0 .75rem;
+  margin: 0 0 1rem 0;
   font-size: 0.95rem;
   line-height: 1.55;
-  color: #fff;
+  color: rgba(255,255,255,0.9); /* supporting text muted */
 }
-
+.case-meta .label {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #fff; /* labels are pure white */
+  text-transform: none;
+}
 .case-hero-text p {
   color: #fff;
   font-size: 1rem;
