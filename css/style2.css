@@ -542,6 +542,14 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   border-top: 1px solid var(--border);
   padding-top: 2rem;
 }
+/* Row spacing for Define section */
+.define-row {
+  margin-top: 1.75rem;
+}
+
+.section.wrapper .define-row:first-of-type {
+  margin-top: 1.25rem;
+}
 
 /* Compact version of a card for short content */
 .card-compact {
