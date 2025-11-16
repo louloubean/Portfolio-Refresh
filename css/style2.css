@@ -536,6 +536,25 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 .card-media img:hover {
   transform: scale(1.04);
 }
+.persona-img-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.2rem;
+}
+
+.persona-img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+}
+
+.persona-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
 
 /* lightweight footer for case study pages */
 .footer {
