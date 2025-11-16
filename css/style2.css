@@ -54,6 +54,13 @@ h4, .quote-hand {
   font-size: 40px;
   color: #fff;
 }
+.section-intro {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
 
 /* Responsive type adjustments (match old) */
 @media (max-width: 980px) {
@@ -1424,6 +1431,18 @@ a.btn {
   font-family: var(--font-heading);
   font-size: clamp(2.3rem, 5vw, 3.2rem);
   margin: 0 0 1rem 0;
+  color: #fff;
+}
+.case-meta h3 {
+  margin: 1rem 0 .25rem;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.case-meta p {
+  margin: 0 0 .75rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
   color: #fff;
 }
 
