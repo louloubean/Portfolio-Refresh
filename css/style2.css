@@ -1453,18 +1453,23 @@ a.btn {
 }
 
 .case-hero-image {
-  width: 280px;
-  height: 180px;
-  background: rgba(255,255,255,0.2);
-  border: 2px dashed rgba(255,255,255,0.4);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: .9rem;
+  width: 100%;
+  max-width: 320px;         /* controls how big the image appears */
+  aspect-ratio: 4 / 5;      /* portrait-ish ratio */
+  border-radius: 14px;      /* 🔹 softly rounded corners */
+  overflow: hidden;         /* ensures image respects the rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
+
+/* make the image fill the frame nicely */
+.case-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* Case Study Hero Button */
 .case-hero-btn {
   display: inline-block;
