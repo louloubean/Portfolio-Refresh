@@ -1433,6 +1433,10 @@ a.btn {
   margin: 0 0 1rem 0;
   color: #fff;
 }
+.case-meta {
+  max-width: 45ch; /* more editorial and refined */
+}
+
 .case-meta h3 {
   margin: 1rem 0 .25rem;
   font-size: 1.05rem;
@@ -1443,7 +1447,8 @@ a.btn {
   margin: 0 0 1rem 0;
   font-size: 0.95rem;
   line-height: 1.55;
-  color: rgba(255,255,255,0.65); /* more muted */
+  color: rgba(255,255,255,0.58); /* more muted */
+  letter-spacing: 0.15px;
 }
 .case-meta .label {
   font-weight: 600;
