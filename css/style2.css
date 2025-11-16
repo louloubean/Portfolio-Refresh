@@ -546,6 +546,48 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 .define-row {
   margin-top: 1.75rem;
 }
+/* Row spacing for Financial section */
+.finance-row {
+  margin-top: 1.75rem;
+}
+
+/* KPI intro text inside the Pro Forma card */
+.kpi-intro {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+/* KPI grid layout */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Individual KPI tile */
+.kpi-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  background: #fff;
+}
+
+/* KPI label + value */
+.kpi-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.kpi-value {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--brand-blue);
+}
 
 .section.wrapper .define-row:first-of-type {
   margin-top: 1.25rem;
