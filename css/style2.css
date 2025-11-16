@@ -622,6 +622,25 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   margin: 0 0 0.4rem;                   /* reduces space above image */
   line-height: 1.45;
 }
+/* ===== Smaller preview image sizing for Discover cards ===== */
+
+/* Market Research SWOT preview */
+.card-image {
+  width: 65%;              /* reduced from 100% */
+  margin: 0.5rem auto 1rem auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Personas preview */
+.persona-img {
+  width: 50%;              /* reduced from 100% */
+  margin: 0.25rem auto 1rem auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Optional: If you want personas slightly smaller than SWOT, try 55% */
 
 .btn-space {
   margin-bottom: 0.5rem;
