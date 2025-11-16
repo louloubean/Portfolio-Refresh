@@ -555,11 +555,10 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
   transform: scale(1.06);
   box-shadow: 0 10px 26px rgba(0,0,0,0.18);
 }
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+.btn-space {
+  margin-bottom: 0.5rem;
 }
+
 
 /* lightweight footer for case study pages */
 .footer {
