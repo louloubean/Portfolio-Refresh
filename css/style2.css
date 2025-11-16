@@ -275,7 +275,7 @@ h4, .quote-hand {
 /* ====== NEW SITE FOOTER ====== */
 .site-footer { border-top: 1px solid #e5e5e5; padding: 2.5rem 0 4rem; background: #fff; }
 .footer-top { display: flex; justify-content: flex-start; margin-bottom: 2rem; }
-.socials { display: flex; align-items: flex-end; gap: 0.8rem; font-size: .9rem; }
+.socials { display: flex; align-items: flex-end; gap: 0.8rem; font-size: .85rem; letter-spacing: 0.02em; }
 .socials a { text-decoration: none; color: var(--brand-blue); }
 .footer-cols { display: flex; gap: 1.75rem; flex-wrap: nowrap;  max-width: var(--content-width);
   margin: 0 auto;}
@@ -283,6 +283,11 @@ h4, .quote-hand {
   flex: 1 1 0;                /* ⬅️ make Education and Experience share space */
   min-width: 0;
 }
+.social-icon {
+  display: flex;             /* flex container around each svg */
+  align-items: flex-end;     /* bottom-align the svg inside */
+}
+
 .social-icon svg {
   display: block;
   width: 24px;
