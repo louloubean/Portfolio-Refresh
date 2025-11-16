@@ -523,38 +523,53 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 .card h3 { font-size: 1rem; margin-bottom: .5rem; }
 .card-image {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transform-origin: center;
 }
-.card-image,
+
+/* if your SWOT img uses .card-media img instead of .card-image, this covers it too */
 .card-media img {
-  transition: transform 0.35s ease;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   transform-origin: center;
 }
 
 .card-image:hover,
 .card-media img:hover {
   transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(242, 119, 164, 0.25); /* brand pink glow */
+  border-color: var(--brand-pink);
+  cursor: zoom-in;
 }
-.persona-img-wrap {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 8px;
+
+.persona-img-link {
+  display: block;
   margin: 0.5rem 0 1.2rem;
 }
 
+/* base style */
 .persona-img {
   width: 100%;
   display: block;
-  border-radius: 8px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   transform-origin: center;
 }
 
+/* hover: same scale as .card-image + pink glow like index2 subcards */
 .persona-img:hover {
-  transform: scale(1.06);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(242, 119, 164, 0.25); /* brand-pink glow */
+  border-color: var(--brand-pink);
+  cursor: zoom-in;
 }
+
 .btn-space {
   margin-bottom: 0.5rem;
 }
