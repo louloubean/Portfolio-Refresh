@@ -275,7 +275,7 @@ h4, .quote-hand {
 /* ====== NEW SITE FOOTER ====== */
 .site-footer { border-top: 1px solid #e5e5e5; padding: 2.5rem 0 4rem; background: #fff; }
 .footer-top { display: flex; justify-content: flex-start; margin-bottom: 2rem; }
-.socials { display: flex; gap: 1rem; font-size: .9rem; }
+.socials { display: flex; align-items: flex-end; gap: 0.8rem; font-size: .9rem; }
 .socials a { text-decoration: none; color: var(--brand-blue); }
 .footer-cols { display: flex; gap: 1.75rem; flex-wrap: nowrap;  max-width: var(--content-width);
   margin: 0 auto;}
@@ -284,12 +284,15 @@ h4, .quote-hand {
   min-width: 0;
 }
 .social-icon svg {
+  display: block;
   width: 24px;
   height: 24px;
   fill: var(--brand-blue);
   transition: fill .2s ease, transform .2s ease;
 }
-
+.social-icon--linkedin svg { margin-bottom: 1px; }
+.social-icon--instagram svg { margin-bottom: 0px; }
+.social-icon--email svg { margin-bottom: 2px; }
 .social-icon:hover svg {
   fill: var(--brand-pink);
   transform: translateY(-2px);
