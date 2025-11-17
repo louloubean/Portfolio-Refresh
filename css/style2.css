@@ -534,6 +534,10 @@ ul, .no-bullets { list-style: none; padding: 0; margin: 0; }
 .discover-row {
   margin-top: 1.75rem;
 }
+/* Remove extra gap between the Discover row cards */
+.discover-row.two-col {
+  column-gap: 1.25rem; /* You can reduce this to 1rem or 0.75rem if you want them even closer */
+}
 
 /* Make the first row (Problem Definition) sit a bit closer to the H2 */
 .section.wrapper .discover-row:first-of-type {
